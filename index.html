@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio | Prodigy InfoTech</title>
+    <title>My Internship Portfolio | Prodigy InfoTech</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -11,54 +11,62 @@
 
     <nav class="navbar">
         <div class="logo">Dev<span>Portfolio</span></div>
-        <ul class="nav-links">
+        <ul class="nav-links" id="nav-links">
             <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </nav>
 
-    <section class="hero" id="home">
-        <div class="hero-text">
-            <h1>Hi, I'm <span class="highlight">[Your Name]</span></h1>
-            <p>Web Development Intern at Prodigy InfoTech</p>
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <h1>Hi, I'm <span>[Your Name]</span></h1>
+            <p>Web Developer Intern at Prodigy InfoTech</p>
             <a href="#projects" class="btn">View My Work</a>
         </div>
-    </section>
+    </header>
 
     <section class="projects" id="projects">
-        <h2 class="section-title">My Internship Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <i class="fas fa-stopwatch fa-3x"></i>
-                <h3>Stopwatch App</h3>
-                <p>A precise timer with lap functionality built using Vanilla JS.</p>
-                <a href="link-to-your-stopwatch-repo" class="project-link">View Code</a>
+        <h2 class="title">My Internship Tasks</h2>
+        <div class="project-container">
+            <div class="card">
+                <i class="fas fa-layer-group"></i>
+                <h3>Landing Page</h3>
+                <p>A fully responsive product landing page using HTML5 and CSS3.</p>
             </div>
-            <div class="project-card">
-                <i class="fas fa-gamepad fa-3x"></i>
+            <div class="card">
+                <i class="fas fa-stopwatch"></i>
+                <h3>Stopwatch</h3>
+                <p>A functional timer with lap counting and start/stop logic.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-th"></i>
                 <h3>Tic-Tac-Toe</h3>
-                <p>Interactive game with win-detection logic and a dynamic UI.</p>
-                <a href="link-to-your-tictactoe-repo" class="project-link">View Code</a>
+                <p>A classic game with win-detection algorithms and interactive UI.</p>
             </div>
-            <div class="project-card">
-                <i class="fas fa-cloud-sun fa-3x"></i>
+            <div class="card">
+                <i class="fas fa-cloud-sun"></i>
                 <h3>Weather App</h3>
-                <p>Real-time data fetching using OpenWeatherMap API.</p>
-                <a href="link-to-your-weather-repo" class="project-link">View Code</a>
+                <p>Fetches real-time weather data using a REST API (OpenWeather).</p>
             </div>
         </div>
     </section>
 
     <footer id="contact">
-        <h2>Get In Touch</h2>
-        <div class="social-links">
+        <p>Let's Connect</p>
+        <div class="socials">
             <a href="#"><i class="fab fa-github"></i></a>
             <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fas fa-envelope"></i></a>
         </div>
-        <p>&copy; 2026 [Your Name] | Prodigy InfoTech Internship</p>
+        <p>&copy; 2026 | Completed Prodigy InfoTech Internship</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
