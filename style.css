@@ -1,77 +1,14 @@
-/* General Setup */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
+const menu = document.querySelector('#mobile-menu');
+const menuLinks = document.querySelector('.nav-links');
 
-body {
-    line-height: 1.6;
-    background-color: #f9f9f9;
-}
-
-.container { padding: 80px 10%; }
-
-/* Navigation */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 10%;
-    background: #fff;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.logo span { color: #6c63ff; }
-.nav-links { display: flex; list-style: none; }
-.nav-links li { margin-left: 25px; }
-.nav-links a { text-decoration: none; color: #333; font-weight: 500; }
-
-/* Hero Section */
-.hero-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 85vh;
-    padding: 0 10%;
-    background: linear-gradient(to right, #ffffff, #f0f2f5);
-}
-
-.highlight { color: #6c63ff; }
-.hero-content h1 { font-size: 3.5rem; line-height: 1.2; }
-.hero-image img {
-    width: 320px;
-    border-radius: 50px;
-    transition: transform 0.3s ease;
-}
-
-.btn {
-    padding: 12px 30px;
-    background: #6c63ff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-/* Skills Grid */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.skill-card {
-    background: white;
-    padding: 20px;
-    text-align: center;
-    border-bottom: 4px solid #6c63ff;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-footer { text-align: center; padding: 40px; background: #333; color: #fff; }
+// Toggle Mobile Menu
+menu.addEventListener('click', function() {
+    menuLinks.classList.toggle('active');
+    // For basic visibility if "active" class is defined in CSS
+    if(menuLinks.style.display === "flex") {
+        menuLinks.style.display = "none";
+    } else {
+        menuLinks.style.display = "flex";
+        menuLinks.style.flexDirection = "column";
+    }
+});
